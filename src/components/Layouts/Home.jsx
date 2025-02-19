@@ -1,10 +1,10 @@
 import { Fragment } from "react"
 import Button from "../Elements/Button"
 import Input from "../Elements/Input/Input"
-import ClassListSections from "../section/ClassListSection"
+import ListVideoSect from "../../Section/ListVideoSect"
 // import Body from "../Fragments/Body"
 
-const Home = () => {
+function Home() {
 
     return (
         <Fragment>
@@ -16,15 +16,13 @@ const Home = () => {
                     </div>
                     <div>
                         <Button
-                        classname="text-white bg-green-500 hover:bg-green-600 px-4"
-                        type="button"
+                            classname="text-white bg-green-500 hover:bg-green-600 px-4"
+                            type="button"
                         >Temukan Video Course untuk Dipelajari!</Button>
                     </div>
                 </section>
             </div>
-            <ClassListSections>
-                
-            </ClassListSections>
+            <ListVideoSect />
             <div>
                 <section className="relative flex-col px-20 py-10 w-full justify-center items-center gap-6 rounded-md bg-center bg-[#000000CC] bg-opacity-70 bg-cover bg-[url('./images/sect3.jpeg')]">
                     <div className="">
@@ -45,6 +43,6 @@ const Home = () => {
             </div>
         </Fragment>
     );
-};
+}
 
 export default Home;

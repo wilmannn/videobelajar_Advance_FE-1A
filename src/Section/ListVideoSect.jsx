@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import DataCard from "../json/DataCard.json";
 
-const ClassListSections = () => {
+const ListVideoSect = () => {
   const [data, setData] = useState([]);
   const [category, setCategory] = useState("");
 
@@ -14,6 +14,10 @@ const ClassListSections = () => {
       userRole: item.userRole,
       name: item.name,
       desc: item.description,
+      star: item.star,
+      rating: item.rating,
+      price: item.price,
+      value: item.value
     }));
     setData(mappedData);
   }, []);
@@ -24,9 +28,9 @@ const ClassListSections = () => {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center gap-8 p-8 text-start">
+      <section className="flex flex-col items-center justify-center gap-8 text-start">
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col self-start gap-2 p-8">
+          <div className="flex flex-col self-start gap-2">
             <h2 className="text-4xl font-bold">
               Koleksi Video Pembelajaran Unggulan
             </h2>
@@ -93,7 +97,7 @@ const ClassListSections = () => {
                 .map((item, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-start w-[30%] p-6 gap-3 bg-white shadow-md rounded-xl"
+                    className="flex flex-col w-[30%] p-6 gap-3 bg-white shadow-md rounded-xl"
                   >
                     <img
                       src={item.img}
@@ -105,13 +109,20 @@ const ClassListSections = () => {
                     <div className="flex flex-row gap-4">
                       <img
                         src={item.profile}
-                        className="w-[12%] rounded-xl"
+                        className="w-[15%] rounded-xl"
                         alt="Profile Image"
                       />
                       <div>
                         <h2 className="font-semibold">{item.userName}</h2>
                         <p>{item.userRole}</p>
                       </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                       <div className="flex items-center">
+                        <div className="text-yellow-500 mr-1">{item.star}</div>
+                        <span className="text-gray-600 text-sm text-underline-2">{item.rating} ({item.value})</span>
+                      </div>
+                       <div className="text-green-500 font-bold">Rp {item.price}K</div>
                     </div>
                   </div>
                 ))
@@ -125,4 +136,4 @@ const ClassListSections = () => {
   );
 };
 
-export default ClassListSections;
+export default ListVideoSect;
