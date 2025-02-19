@@ -1,7 +1,8 @@
 import { Fragment } from "react"
 import Button from "../Elements/Button"
 import Input from "../Elements/Input/Input"
-import Body from "../Fragments/Body"
+import ClassListSections from "../section/ClassListSection"
+// import Body from "../Fragments/Body"
 
 const Home = () => {
 
@@ -21,9 +22,9 @@ const Home = () => {
                     </div>
                 </section>
             </div>
-            <Body>
-
-            </Body>
+            <ClassListSections>
+                
+            </ClassListSections>
             <div>
                 <section className="relative flex-col px-20 py-10 w-full justify-center items-center gap-6 rounded-md bg-center bg-[#000000CC] bg-opacity-70 bg-cover bg-[url('./images/sect3.jpeg')]">
                     <div className="">
