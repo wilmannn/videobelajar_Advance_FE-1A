@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import Thumb from "/images/acp1.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -63,7 +62,7 @@ const EditCourse = () => {
       .delete(`https://67b731f22bddacfb270e0dda.mockapi.io/users/${id}`)
       .then(() => {
         getData();
-        setShowDelete(false); // Menutup modal setelah delete berhasil
+        setShowDelete(false);
       });
 
     setTimeout(() => {

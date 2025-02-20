@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import Thumb from "/images/cp1.png";
 import { useState } from "react";
 import axios from "axios";
 
