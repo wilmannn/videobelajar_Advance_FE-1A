@@ -6,12 +6,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LoginPage from './pages/loginpage'
 import RegisterPage from './pages/registerpage'
 import HomePage from './pages/homepage'
+import EditPostingans from './service/EditCourse'
+import CreatePostingans from './service/CreateCourse'
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <div>Hello World</div>,
-  },
+
   {
     path: '/login',
     element: <LoginPage />,
@@ -23,6 +22,18 @@ const router = createBrowserRouter([
   {
     path: '/home',
     element: <HomePage />
+  },
+  {
+    path: '/',
+    element: <HomePage />
+  },
+  {
+    path: "/edit-course",
+    element: <EditPostingans />
+  },
+  {
+    path: '/create-course',
+    element: <CreatePostingans />
   }
 ]);
 
